@@ -3,15 +3,33 @@
   <meta charset="UTF-8">
   <title>Who Represents You?</title>
   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
+  <h1> Who Represents You? </h1>
+  <form id = "select-official">
+    <select id = "select-state">
+      <option value = "" disabled selected>-- select a state --</option>
+    </select>    
+    <select id = "house-or-senate">
+    <option value = "" disabled selected>-- select house or senate --</option>
+      <option value = "senate">Senate</option>
+      <option value = "house">House of Representatives</option>
+    </select>
+  </form>
+
   <script src="assets/js/jquery-2.2.2.min.js"></script>
   <script src="assets/js/underscore.js"></script>
   <script src="app/app.js"></script>
+  <!-- models -->
   <script src="app/models/electedOfficial.js"></script>
   <script src="app/models/houseMember.js"></script>
-    <script src="app/models/senateMember.js"></script>
+  <script src="app/models/senateMember.js"></script>
+  <!-- views -->
+  <script src="app/views/states.js"></script>
+  <script src="app/views/states.js"></script>
+  <!-- controllers -->
+  <script src="app/controllers/electedOfficialsController.js"></script>
+  <script src="app/controllers/applicationController.js"></script>
 </body>
 </html>
