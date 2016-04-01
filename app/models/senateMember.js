@@ -11,17 +11,14 @@ app.senateMember = {
         this.votesWithPartyPct = votesWithPartyPct;
         this.electedOfficial = electedOfficial;
 
-
         var self = this;
         function initialize(){
           counter++;
           self.id = counter;
           app.senateMember.all.push(self);
         }
+      initialize();
     }
-
-
     return senateMember;
-
   }())
 }
