@@ -4,34 +4,63 @@
   <title>Who Represents You?</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/application.css">
+  <!-- <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <div class='container'>
-    <h1>Who Represents You?</h1>
-    <form role="form">
-      <!-- State Dropdown -->
-      <div id="state" class="row">
-        <div class="form-group">
-          <label for="state">State</label>
-          <select id="state-dropdown" class="form-control input-lg">
-            <option value="" disabled selected>Select a State</option>
-          </select>
-        </div>
-      </div>
-      <!-- Chamber Dropdown -->
-      <div id="chamber" class="row">
-        <div class="form-group">
-          <label for="chamber">Chamber of Congress</label>
-          <select class="form-control input-lg">
-            <option value="" disabled selected>Select a Chamber of Congress</option>
-            <option value="senate">Senate</option>
-            <option value="house">House of Representatives</option>
-          </select>
-        </div>
-      </div>
 
-    </form>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand nav-logo" href="#">Who Represents You?</a>
+      </div>
+    </div>
+  </nav>
+  <!-- NAVBAR END -->
+
+  <!-- JUMBOTRON -->
+  <div class="container-full-bg">
+  	<div class="container special">
+  		<div class="jumbotron">
+        <div class='container-dropdown'>
+
+          <div class="row header-title">
+            Do You Know Your Representative?
+          </div>
+
+          <form role="form">
+            <!-- State Dropdown -->
+            <div id="state" class="row">
+              <div class="form-group">
+                <label class="title" for="state">Select a State:</label>
+                <select id="state-dropdown" class="form-control input-lg">
+                  <option value="" disabled selected>State</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Chamber Dropdown -->
+            <div id="chamber" class="row">
+              <div class="form-group">
+                <label class="title" for="chamber">Select a Chamber of Congress:</label>
+                <select class="form-control input-lg">
+                  <option value="" disabled selected>Chamber</option>
+                  <option value="senate">Senate</option>
+                  <option value="house">House of Representatives</option>
+                </select>
+              </div>
+            </div>
+
+          </form>
+        </div>
+  		</div>
+    </div>
   </div>
+<!-- JUMBOTRON END -->
+
+
 
 
   <!-- JavaScript -->

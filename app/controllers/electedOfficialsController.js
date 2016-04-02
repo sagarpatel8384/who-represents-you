@@ -6,7 +6,7 @@ $(document).ready(function() {
     $('#chamber').hide();
 
     $('#state').on("change", function(){
-      $('#chamber').show();
+      $('#chamber').fadeIn("slow");
     })
 
     $('#chamber').on("change", app.electedOfficial.controller.show.init)
