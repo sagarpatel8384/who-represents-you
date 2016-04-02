@@ -50,9 +50,9 @@ var states = {
     "WI": "Wisconsin",
     "WY": "Wyoming"
 }
-$(
-    $.each(states, function(abbrev, stateName){
-        // debugger;
-        $('#select-state').append("<option value = '" + abbrev + "'>" + stateName + "</option>")
-    })
-)
+
+$(document).ready(function() {
+  _.each(states, function(abbrev, stateName) {
+    $('#state-dropdown').append("<option value = '" + abbrev + "'>" + stateName + "</option>")
+  });
+})

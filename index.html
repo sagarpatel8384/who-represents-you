@@ -6,18 +6,35 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
-  <h1> Who Represents You? </h1>
-  <form id = "select-official">
-    <select id = "select-state">
-      <option value = "" disabled selected>-- select a state --</option>
-    </select>
-    <select id = "house-or-senate">
-    <option value = "" disabled selected>-- select house or senate --</option>
-      <option value = "senate">Senate</option>
-      <option value = "house">House of Representatives</option>
-    </select>
-  </form>
+  <div class='container'>
+    <h1>Who Represents You?</h1>
+    <form role="form">
+      <!-- State Dropdown -->
+      <div id="state" class="row">
+        <div class="form-group">
+          <label for="state">State</label>
+          <select id="state-dropdown" class="form-control input-lg">
+            <option value="" disabled selected>Select a State</option>
+          </select>
+        </div>
+      </div>
+      <!-- Chamber Dropdown -->
+      <div id="chamber" class="row">
+        <div class="form-group">
+          <label for="chamber">Chamber of Congress</label>
+          <select class="form-control input-lg">
+            <option value="" disabled selected>Select a Chamber of Congress</option>
+            <option value="senate">Senate</option>
+            <option value="house">House of Representatives</option>
+          </select>
+        </div>
+      </div>
 
+    </form>
+  </div>
+
+
+  <!-- JavaScript -->
   <script src="assets/js/jquery-2.2.2.min.js"></script>
   <script src="assets/js/underscore.js"></script>
   <script src="app/app.js"></script>
@@ -26,7 +43,6 @@
   <script src="app/models/houseMember.js"></script>
   <script src="app/models/senateMember.js"></script>
   <!-- views -->
-  <script src="app/views/states.js"></script>
   <script src="app/views/states.js"></script>
   <!-- adapters -->
   <script src="app/adapters/electedOfficialsAdapter.js"></script>
