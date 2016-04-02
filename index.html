@@ -20,53 +20,63 @@
   </nav>
   <!-- NAVBAR END -->
 
+  <!-- MODAL -->
+  <div class="modal-window">
+    <div class="modal-text"></div>
+  </div>
+  <!-- MODAL END -->
+
+  <!-- MAP -->
+  <div id="map"></div>
+  <!-- MAP END -->
+
   <!-- JUMBOTRON -->
-  <div class="container-full-bg">
-  	<div class="container special">
-  		<div class="jumbotron">
-        <div class='container-dropdown'>
+  <div class="container-body">
+    <div class="container-full-bg">
+    	<div class="container special">
+    		<div class="jumbotron">
+          <div class='container-dropdown'>
+            <div class="row header-title">
+              Do You Know Your Representative?
+            </div>
 
-          <div class="row header-title">
-            Do You Know Your Representative?
+            <form role="form">
+              <!-- State Dropdown -->
+              <div id="state" class="row">
+                <div class="form-group">
+                  <label class="title" for="state">Select a State:</label>
+                  <select id="state-dropdown" class="form-control input-lg">
+                    <option value="" disabled selected>State</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Chamber Dropdown -->
+              <div id="chamber" class="row">
+                <div class="form-group">
+                  <label class="title" for="chamber">Select a Chamber of Congress:</label>
+                  <select id="chamber-dropdown" class="form-control input-lg">
+                    <option value="" disabled selected>Chamber</option>
+                    <option value="senate">Senate</option>
+                    <option value="house">House of Representatives</option>
+                  </select>
+                </div>
+              </div>
+
+            </form>
           </div>
-
-          <form role="form">
-            <!-- State Dropdown -->
-            <div id="state" class="row">
-              <div class="form-group">
-                <label class="title" for="state">Select a State:</label>
-                <select id="state-dropdown" class="form-control input-lg">
-                  <option value="" disabled selected>State</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Chamber Dropdown -->
-            <div id="chamber" class="row">
-              <div class="form-group">
-                <label class="title" for="chamber">Select a Chamber of Congress:</label>
-                <select class="form-control input-lg">
-                  <option value="" disabled selected>Chamber</option>
-                  <option value="senate">Senate</option>
-                  <option value="house">House of Representatives</option>
-                </select>
-              </div>
-            </div>
-
-          </form>
-        </div>
-  		</div>
+    		</div>
+      </div>
     </div>
   </div>
-<!-- JUMBOTRON END -->
-
-
-
+  <!-- JUMBOTRON END -->
 
   <!-- JavaScript -->
   <script src="assets/js/jquery-2.2.2.min.js"></script>
   <script src="assets/js/underscore.js"></script>
   <script src="app/app.js"></script>
+  <script src="assets/js/raphael-min.js"></script>
+  <script src="assets/js/kartograph.min.js"></script>
   <!-- models -->
   <script src="app/models/electedOfficial.js"></script>
   <script src="app/models/houseMember.js"></script>

@@ -52,7 +52,7 @@ var states = {
 }
 
 $(document).ready(function() {
-  _.each(states, function(abbrev, stateName) {
-    $('#state-dropdown').append("<option value = '" + abbrev + "'>" + stateName + "</option>")
+  _.each(states, function(stateName, abbreviation) {
+    $('#state-dropdown').append("<option value = '" + abbreviation + "'>" + stateName + "</option>")
   });
 })

@@ -16,15 +16,21 @@ $(document).ready(function() {
 app.electedOfficial.controller = {
   show: {
     init: function(event){
-      // event.preventDefault();
-      var state = $('#state').val();
-      var chamber = $('#chamber').val();
-      app.electedOfficial.adapter.getBy(state, chamber, key).then(function(data) {
+      event.preventDefault();
+      var stateInput = $('#state-dropdown').val();
+      var chamberInput = $('#chamber-dropdown').val();
+
+      app.electedOfficial.adapter.getBy(stateInput, chamberInput, key).then(function(data) {
         app.electedOfficial.controller.render(data);
       })
-    },
-    render: function(){
-
     }
+  },
+  render: function(data){
+    $('.container-dropdown').fadeOut('fast')
+    $('.modal-window').fadeIn('fast');
+
+    _.each(data, function(member) {
+      $('.modal-text').append("<div class='elected-official-name'>" + member.electedOfficial.firstName + " " + member.electedOfficial.lastName + "</div>");
+    });
   }
 }
