@@ -7,7 +7,7 @@ app.electedOfficial.adapter = {
       var members = data.results[0].members;
 
       members.forEach(function(member) {
-          var electedOfficial = new app.electedOfficial.new(member.first_name, member.last_name, member.party, member.twitter_account, member.gender, member.state, member.id, member.url);
+          var electedOfficial = new app.electedOfficial.new(member.first_name, member.last_name, member.party, member.twitter_account, member.state, member.id, member.url);
 
           var official = new app[chamber + "Member"].new(member.seniority, member.next_election, member.total_votes, member.missed_votes, member.missed_votes_pct, member.votes_with_party_pct, electedOfficial);
       })

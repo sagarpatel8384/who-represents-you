@@ -30,6 +30,7 @@ app.electedOfficial.controller = {
     $('.container-dropdown').fadeOut('fast')
     $('.modal-window').fadeIn('fast');
 
+    // Populates modal with politician information
     _.each(data, function(member) {
       var logoURL = member.electedOfficial.party === "R" ? "assets/img/republican-logo.png" : "assets/img/democrat-logo.png"
 
@@ -41,5 +42,10 @@ app.electedOfficial.controller = {
         </tr>`
       );
     });
+
+    // Click away from modal window brings you back to the main screen
+    $('.container-full-bg').on('click', function() {
+      window.location = 'index.html';
+    })
   }
 }
