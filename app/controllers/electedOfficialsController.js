@@ -26,11 +26,20 @@ app.electedOfficial.controller = {
     }
   },
   render: function(data){
+    var chamberInput = $('#chamber-dropdown').val();
     $('.container-dropdown').fadeOut('fast')
     $('.modal-window').fadeIn('fast');
 
     _.each(data, function(member) {
-      $('.modal-text').append("<div class='elected-official-name'>" + member.electedOfficial.firstName + " " + member.electedOfficial.lastName + "</div>");
+      var logoURL = member.electedOfficial.party === "R" ? "assets/img/republican-logo.png" : "assets/img/democrat-logo.png"
+
+      $('.table-hover').append(
+        `<tr>
+          <td><a href="#" class="` + chamberInput + `Member">` + member.electedOfficial.firstName + `</a></td>
+          <td><a href="#" class="` + chamberInput + `Member">` + member.electedOfficial.lastName + `</a></td>
+          <td><img class="political-logo" src="` + logoURL + `"></td>
+        </tr>`
+      );
     });
   }
 }

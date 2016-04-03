@@ -5,7 +5,6 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/application.css">
-  <!-- <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'> -->
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -14,7 +13,7 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand nav-logo" href="#">Who Represents You?</a>
+        <a class="navbar-brand nav-logo" href="/">Who Represents You?</a>
       </div>
     </div>
   </nav>
@@ -22,13 +21,21 @@
 
   <!-- MODAL -->
   <div class="modal-window">
-    <div class="modal-text"></div>
+    <div class="modal-text">
+      <a href="/"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a>
+      <table id="table-div" class="table table-hover">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Political Party</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
   </div>
   <!-- MODAL END -->
-
-  <!-- MAP -->
-  <div id="map"></div>
-  <!-- MAP END -->
 
   <!-- JUMBOTRON -->
   <div class="container-body">
@@ -75,18 +82,19 @@
   <script src="assets/js/jquery-2.2.2.min.js"></script>
   <script src="assets/js/underscore.js"></script>
   <script src="app/app.js"></script>
-  <script src="assets/js/raphael-min.js"></script>
-  <script src="assets/js/kartograph.min.js"></script>
   <!-- models -->
   <script src="app/models/electedOfficial.js"></script>
-  <script src="app/models/houseMember.js"></script>
   <script src="app/models/senateMember.js"></script>
+  <script src="app/models/houseMember.js"></script>
   <!-- views -->
   <script src="app/views/states.js"></script>
   <!-- adapters -->
   <script src="app/adapters/electedOfficialsAdapter.js"></script>
+  <script src="app/adapters/senateMembersAdapter.js"></script>
+  <script src="app/adapters/houseMembersAdapter.js"></script>
   <!-- controllers -->
   <script src="app/controllers/electedOfficialsController.js"></script>
-  <script src="app/controllers/applicationController.js"></script>
+  <script src="app/controllers/senateMembersController.js"></script>
+  <script src="app/controllers/houseMembersController.js"></script>
 </body>
 </html>

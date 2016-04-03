@@ -15,7 +15,7 @@ html, body {
 }
 
 .container-full-bg {
-  background-image: url("../img/lincoln-memorial.jpg");
+  background-color: #164B6A;
   background-position: center;
   background-size: cover;
 }
@@ -45,6 +45,10 @@ html, body {
   color: white !important;
 }
 
+.nav-logo:hover {
+  color: #C45142 !important;
+}
+
 .modal-window {
   display: none;
   height: 50%;
@@ -65,4 +69,21 @@ html, body {
 
 .modal-text {
   font-size: 20px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.political-logo {
+  height: 27px;
+  width: 34px;
+}
+
+th, td {
+  text-align: center;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #34495e;
 }
