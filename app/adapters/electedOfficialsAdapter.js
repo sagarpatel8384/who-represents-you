@@ -21,5 +21,15 @@ app.electedOfficial.adapter = {
 
       return results;
     });
+  },
+  getByMemberId: function(memberId) {
+    return $.ajax({
+      method: 'GET',
+      //http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/S000320.json?api-key=___
+      url: 'http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/' + memberId + '.json?api-key=' + key
+    }).then(function(data) {
+      // debugger;
+      return data.results[0];
+    });
   }
 }

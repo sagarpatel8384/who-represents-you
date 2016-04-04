@@ -19,5 +19,10 @@ app.electedOfficial = {
         }
     }
     return electedOfficial;
-  }())
+  }()),
+  findBy: function(chamber, memberId){
+    return _.find(app[chamber + "Member"].all, function(member){
+      return member.electedOfficial.memberId === memberId;
+    });
+  }
 }
