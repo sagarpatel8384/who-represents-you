@@ -13,8 +13,8 @@ var expandModalWindow = function(){
    $('.modal-text').hide();
 
    $( ".modal-window" ).animate({
-     height: "80%",
-     width: "85%"
+     height: "75%",
+     width: "75%"
    });
 
 

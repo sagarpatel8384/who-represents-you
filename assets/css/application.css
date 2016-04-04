@@ -16,7 +16,13 @@ html, body {
 }
 
 .container-full-bg {
-  background-color: #164B6A;
+  /*background-color: #164B6A;
+  background-position: center;
+  background-size: cover;*/
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  background-image: url("../img/american-flag-bg.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -69,8 +75,6 @@ html, body {
   overflow: scroll;
 }
 
-
-
 .modal-window::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 5px;
@@ -100,4 +104,34 @@ th, td {
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
   background-color: #34495e;
+}
+
+.member-label {
+  font-weight: 900;
+}
+
+.member-label-name {
+  font-size: 40px;
+}
+
+.member-profile-picture {
+  float: right;
+  padding:1px;
+  border:1px solid #021a40;
+  width: 400px;
+  height: auto;
+  margin-top: 120px;
+}
+
+.member-information {
+  padding: 20px 100px;
+}
+
+.member-info-item {
+  font-size: 24px;
+}
+
+.navbar-custom {
+  color: #FFFFFF;
+  background-color: #22313F;
 }

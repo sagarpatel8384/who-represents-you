@@ -11,12 +11,31 @@ app.houseMember.controller = {
     init: function(memberId) {
       var member = app.electedOfficial.findBy("house", memberId);
       app.electedOfficial.adapter.getByMemberId(memberId).then(function(data){
-        // debugger;
-        var memberHTML = "<div><p>" + data.first_name + " " + data.last_name + "</p><p>" + member.electedOfficial.state + "</p><p>" + data.current_party + "</p><p>" + data.date_of_birth + "</p><p>" + data.url + "</p><p>" + data.gender + "</p></div>"
-        var memberInfo = "<div><p>" + member.district + "</p><p>" + member.houseSeniority + "</p><p>" + member.nextElection + "</p><p>" + member.totalVotes + "</p><p>" + member.missedVotes + "</p><p>" + member.missedVotePct + "</p><p>" + member.votesWithPartyPct + "</p></div>"
-        debugger;
-        $('.modal-window').append(memberHTML)
-        $('.modal-window').append(memberInfo)
+        var memberImg = "<img class='member-profile-picture' src = 'https://www.govtrack.us/data/photos/" + data.govtrack_id + ".jpeg'>"
+        var memberHTML = `
+        <div>
+          <p><span class="member-label-name">` + data.first_name + " " + data.last_name + `</span></p>
+          <hr>
+          <p class="member-info-item"><span class="member-label">State: </span>` + member.electedOfficial.state + `</p>
+          <p class="member-info-item"><span class="member-label">Political Party: </span>` + data.current_party + `</p>
+          <p class="member-info-item"><span class="member-label">Date of Birth: </span>` + data.date_of_birth + `</p>
+          <p class="member-info-item"><span class="member-label">Homepage: </span>` + data.url + `</p>
+          <p class="member-info-item"><span class="member-label">Gender: </span>` + data.gender + `</p>
+        </div>`
+
+        var memberInfo = `
+        <div>
+          <p class="member-info-item"><span class="member-label">State District: </span>` + member.district + `</p>
+          <p class="member-info-item"><span class="member-label">Seniority: </span>` + member.houseSeniority + `</p>
+          <p class="member-info-item"><span class="member-label">Total Votes in Congress: </span>` + member.totalVotes + `</p>
+          <p class="member-info-item"><span class="member-label">Missed Votes: </span>` + member.missedVotes + `</p>
+          <p class="member-info-item"><span class="member-label">% of Votes Missed in Congress: </span>` + member.missedVotePct + `</p>
+          <p class="member-info-item"><span class="member-label">% of Votes With Political Party: </span>` + member.votesWithPartyPct + `</p>
+        </div>`
+
+        $('.member-information').append(memberImg)
+        $('.member-information').append(memberHTML)
+        $('.member-information').append(memberInfo)
       })
       // debugger;
     }
