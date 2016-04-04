@@ -145,3 +145,11 @@ a:hover {
   width: 50%;
   text-align: left !important;
 }
+
+#logo {
+  width: 5%;
+}
+
+#logo-text {
+  margin-left: 5px;
+}
