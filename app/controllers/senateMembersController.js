@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $('body').on('click', 'a.senateMember', function() {
-    alert('HELLO WORLD');
+    alert('HELLO senate member');
   })
 })
 

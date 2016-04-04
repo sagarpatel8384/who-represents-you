@@ -2,16 +2,7 @@ var key = $.getScript("./environment.js", function(){
   return key;
 });
 
-$(document).ready(function() {
-    $('#chamber').hide();
 
-    $('#state').on("change", function(){
-      $('#chamber').fadeIn("slow");
-    })
-
-    $('#chamber').on("change", app.electedOfficial.controller.show.init)
-  }
-)
 
 app.electedOfficial.controller = {
   show: {
@@ -35,9 +26,9 @@ app.electedOfficial.controller = {
       var logoURL = member.electedOfficial.party === "R" ? "assets/img/republican-logo.png" : "assets/img/democrat-logo.png"
 
       $('.table-hover').append(
-        `<tr>
-          <td><a href="#" class="` + chamberInput + `Member">` + member.electedOfficial.firstName + `</a></td>
-          <td><a href="#" class="` + chamberInput + `Member">` + member.electedOfficial.lastName + `</a></td>
+        `<tr id="` + member.electedOfficial.memberId + `" class="elected-official-row ` + chamberInput + `">
+          <td>` + member.electedOfficial.firstName  + `</td>
+          <td>` + member.electedOfficial.lastName + `</td>
           <td><img class="political-logo" src="` + logoURL + `"></td>
         </tr>`
       );

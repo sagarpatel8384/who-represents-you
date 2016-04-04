@@ -14,12 +14,11 @@ app.electedOfficial.adapter = {
           official.district = member.district
         }
       })
-      // Returns an Array of Elected Officials who are in a particular state
-      // Currently working for Senate Members but not House Members
+
       var results = _.filter(app[chamber + "Member"].all, function(official) {
         return official.electedOfficial.state === state;
       })
-      debugger;
+
       return results;
     });
   }
