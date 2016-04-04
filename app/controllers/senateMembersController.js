@@ -11,16 +11,32 @@ app.senateMember.controller = {
     init: function(memberId) {
       var member = app.electedOfficial.findBy("senate", memberId);
       app.electedOfficial.adapter.getByMemberId(memberId).then(function(data){
-        // debugger;
-        var memberImg = "<img src = 'https://www.govtrack.us/data/photos/" + data.govtrack_id + "-200px.jpeg'>"
-        var memberHTML = "<div><p>" + data.first_name + " " + data.last_name + "</p><p>" + member.electedOfficial.state + "</p><p>" + data.current_party + "</p><p>" + data.date_of_birth + "</p><p>" + data.url + "</p><p>" + data.gender + "</p></div>"
-        var memberInfo = "<div><p>" + member.senateSeniority + "</p><p>" + member.nextElection + "</p><p>" + member.totalVotes + "</p><p>" + member.missedVotes + "</p><p>" + member.missedVotePct + "</p><p>" + member.votesWithPartyPct + "</p></div>"
-        debugger;
+
+        var memberImg = "<img class='member-profile-picture' src = 'https://www.govtrack.us/data/photos/" + data.govtrack_id + ".jpeg'>"
+        var memberHTML = `
+        <div>
+          <p><span class="member-label-name">` + data.first_name + " " + data.last_name + `</p>
+          <hr>
+          <p class="member-info-item"><span class="member-label">State: </span>` + member.electedOfficial.state + `</p>
+          <p class="member-info-item"><span class="member-label">Political Party: </span>` + data.current_party + `</p>
+          <p class="member-info-item"><span class="member-label">Date of Birth: </span>` + data.date_of_birth + `</p>
+          <p class="member-info-item"><span class="member-label">Homepage: </span><a href="` + data.url + `" target=_blank>` + data.url + `</a></p>
+          <p class="member-info-item"><span class="member-label">Gender: </span>` + data.gender + `</p>
+        </div>`
+
+        var memberInfo = `
+        <div>
+          <p class="member-info-item"><span class="member-label">Seniority: </span>` + member.senateSeniority + `</p>
+          <p class="member-info-item"><span class="member-label">Total Votes in Senate: </span>` + member.totalVotes + `</p>
+          <p class="member-info-item"><span class="member-label">Missed Votes: </span>` + member.missedVotes + `</p>
+          <p class="member-info-item"><span class="member-label">% of Votes Missed in Senate: </span>` + member.missedVotePct + `</p>
+          <p class="member-info-item"><span class="member-label">% of Votes With Political Party: </span>` + member.votesWithPartyPct + `</p>
+        </div>`
+
         $('.modal-window').append(memberImg)
         $('.modal-window').append(memberHTML)
         $('.modal-window').append(memberInfo)
       })
-      // debugger;
     }
   }
 }

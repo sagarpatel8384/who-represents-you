@@ -9,7 +9,7 @@ app.electedOfficial.adapter = {
         var electedOfficial = new app.electedOfficial.new(member.first_name, member.last_name, member.party, member.twitter_account, member.state, member.id, member.url);
 
         var official = new app[chamber + "Member"].new(member.seniority, member.next_election, member.total_votes, member.missed_votes, member.missed_votes_pct, member.votes_with_party_pct, electedOfficial);
-        // debugger;
+
         if(chamber === "house"){
           official.district = member.district
         }
@@ -28,7 +28,6 @@ app.electedOfficial.adapter = {
       //http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/S000320.json?api-key=___
       url: 'http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/' + memberId + '.json?api-key=' + key
     }).then(function(data) {
-      // debugger;
       return data.results[0];
     });
   }

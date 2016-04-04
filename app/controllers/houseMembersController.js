@@ -19,7 +19,7 @@ app.houseMember.controller = {
           <p class="member-info-item"><span class="member-label">State: </span>` + member.electedOfficial.state + `</p>
           <p class="member-info-item"><span class="member-label">Political Party: </span>` + data.current_party + `</p>
           <p class="member-info-item"><span class="member-label">Date of Birth: </span>` + data.date_of_birth + `</p>
-          <p class="member-info-item"><span class="member-label">Homepage: </span>` + data.url + `</p>
+          <p class="member-info-item"><span class="member-label">Homepage: </span><a href="` + data.url + `" target=_blank>` + data.url + `</a></p>
           <p class="member-info-item"><span class="member-label">Gender: </span>` + data.gender + `</p>
         </div>`
 
@@ -37,7 +37,6 @@ app.houseMember.controller = {
         $('.member-information').append(memberHTML)
         $('.member-information').append(memberInfo)
       })
-      // debugger;
     }
 
 

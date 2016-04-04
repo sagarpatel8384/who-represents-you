@@ -135,3 +135,7 @@ th, td {
   color: #FFFFFF;
   background-color: #22313F;
 }
+
+a:hover {
+  text-decoration: none;
+}
