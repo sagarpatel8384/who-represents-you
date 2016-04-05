@@ -1,3 +1,4 @@
+// Seed Data used to populate State Dropdown
 var states = {
     "AL": "Alabama",
     "AK": "Alaska",

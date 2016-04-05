@@ -10,7 +10,7 @@ app.houseMember.controller = {
   show: {
     init: function(memberId) {
       var member = app.electedOfficial.findBy("house", memberId);
-      app.electedOfficial.adapter.getByMemberId(memberId).then(function(data){
+      app.electedOfficial.adapter.getByMemberId(memberId).then(function(data) {
         var memberImg = "<img class='member-profile-picture' src = 'https://www.govtrack.us/data/photos/" + data.govtrack_id + ".jpeg'>"
         var memberHTML = `
         <p><span class="member-label-name">` + data.first_name + " " + data.last_name + `</p>
@@ -73,11 +73,9 @@ app.houseMember.controller = {
           <tbody>
         </table>`
 
-        $('.modal-window').append(memberImg)
-        $('.modal-window').append(memberHTML)
-      })
+        $('.modal-window').append(memberImg);
+        $('.modal-window').append(memberHTML);
+      });
     }
-
-
   }
 }
