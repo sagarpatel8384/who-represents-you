@@ -9,11 +9,11 @@ $(document).ready(function() {
   $('#chamber').on("change", app.electedOfficial.controller.show.init)
 
   // TRUMP EASTER EGG
-  $('.trump-modal').hide(); // Hide Trump Easter Egg GIF
+  $('.trump').hide(); // Hide Trump Easter Egg GIF
   $('#logo').hover(function() {
-     $('.trump-modal').show();
+     $('.trump').show();
   }, function() {
-    $('.trump-modal').hide();
+    $('.trump').hide();
   });
 });
 

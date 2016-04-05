@@ -21,5 +21,5 @@ app.houseMember = {
       initialize();
     }
     return houseMember;
-  }());
+  }())
 }

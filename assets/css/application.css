@@ -50,6 +50,10 @@ html, body {
   color: white !important;
 }
 
+.navbar-inner {
+    background:transparent;
+}
+
 .modal-window {
   display: none;
   height: 50%;
@@ -69,11 +73,22 @@ html, body {
   overflow: scroll;
 }
 
-.trump-modal {
+.modal-window2 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 10px solid darkred;
+  -webkit-box-shadow: #000000 3px 3px 3px;
+  -moz-box-shadow: #000000 3px 3px 3px;
+  box-shadow: #000000 3px 3px 3px;
+  z-index: 999;
+}
+
+.trump-gif {
+  height: 500px;
+  width: 900px;
 }
 
 .modal-window::-webkit-scrollbar {
@@ -131,11 +146,6 @@ th, td {
   font-size: 24px;
 }
 
-.navbar-custom {
-  color: #FFFFFF;
-  background-color: #22313F;
-}
-
 a:hover {
   text-decoration: none;
 }
@@ -146,9 +156,11 @@ a:hover {
 }
 
 #logo {
-  width: 5%;
+  width: 6%;
 }
 
 #logo-text {
+  font-size: 28px;
   margin-left: 5px;
+  font-family: 'Exo 2', sans-serif;
 }

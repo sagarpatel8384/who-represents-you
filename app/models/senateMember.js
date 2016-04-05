@@ -20,5 +20,5 @@ app.senateMember = {
       initialize();
     }
     return senateMember;
-  }());
+  }())
 }
