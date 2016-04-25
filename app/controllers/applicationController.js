@@ -7,14 +7,6 @@ $(document).ready(function() {
 
   // Upon selecting a chamber, make AJAX call
   $('#chamber').on("change", app.electedOfficial.controller.show.init)
-
-  // TRUMP EASTER EGG
-  $('.trump').hide(); // Hide Trump Easter Egg GIF
-  $('#logo').hover(function() {
-     $('.trump').show();
-  }, function() {
-    $('.trump').hide();
-  });
 });
 
 var expandModalWindow = function() {
